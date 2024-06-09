@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      defer
+    ></script>
   </head>
   <body>
     <div id="app"></div>
+    <!-- `defer` has no effect if the source is not defined on traditional scripts. -->
+    <!-- That's why this script should go right before `</body>` -->
     <script>
-      const app = document.querySelector("#app");
-
-      const header = document.createElement("h1");
-
-      const text = "Develop. Preview. Ship.";
-      const headerContent = document.createTextNode(text);
-
-      header.appendChild(headerContent);
-
-      app.appendChild(header);
+      const app = document.getElementById("app");
+      const root = ReactDOM.createRoot(app);
+      root.render(<h1>Develop. Preview. Ship.</h1>);
     </script>
   </body>
 </html>
