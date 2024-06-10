@@ -21,26 +21,6 @@
     <div id="app"></div>
     <!-- defer has no effect if the source is not defined on traditional scripts. 
      That's why this script should go right before closing body tag -->
-    <script type="text/jsx">
-      // DOM manipulation
-      const app = document.getElementById("app");
-
-      // Functionality definition
-      function Header() {
-        return <h1>Develop. Preview. Ship.</h1>
-      }
-
-      function HomePage() {
-        return (
-          <div>
-            {/* Nesting the Header component */}
-            <Header />
-          </div>
-        )
-      }
-
-      const root = ReactDOM.createRoot(app);
-      root.render(<HomePage />);
-    </script>
+    <script src="./index.jsx" type="text/jsx"></script>
   </body>
 </html>
